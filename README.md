@@ -2,7 +2,7 @@
 
 An animated gauge for showing water fill levels in OpenHAB.
 
-[Water fill level gauge](preview.png)
+![Water fill level gauge](preview.png)
 
 # Install
 
