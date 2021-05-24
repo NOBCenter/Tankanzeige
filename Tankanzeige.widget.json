@@ -1,0 +1,36 @@
+{
+    "name": "Tankanzeige",
+    "author": "Moritz",
+    "description": "Zeigt den Tankfuellstand an.",
+    "settings": [
+        {
+            "type": "number",
+            "id": "wave_size",
+            "label": "Wave Size",
+            "default": "16",
+            "description": "Amplitude of waves"
+        },
+        {
+            "type": "number",
+            "id": "wave_length",
+            "label": "Wave Length",
+            "default": "5",
+            "description": "Wave length"
+        },
+        {
+            "type": "item",
+            "id": "item",
+            "label": "Fill Percentage",
+            "default": "0",
+            "description": "Tank fill percentage"
+        },
+        {
+            "type": "number",
+            "id": "tank_size",
+            "label": "Tanke Size",
+            "default": "90",
+            "description": "Tank volume in L"
+        }
+    ],
+    "template": "<style>\n  #divCanvas { margin: 0; }\n</style>\n<div oc-lazy-load=\"['/static/tankfill/tankfill.js']\" id=\"divCanvas\" >\n\t<canvas id=\"sineCanvas\"></canvas>\n\t<input type=\"hidden\" id=\"filling\" value=\"{{ itemValue( config.item ) || 0 }}\" ></input>\n\t<input type=\"hidden\" id=\"size\" value=\"{{config.wave_size}}\" ></input>\n\t<input type=\"hidden\" id=\"length\" value=\"{{config.wave_length}}\" ></input>\n  <input type=\"hidden\" id=\"tank\" value=\"{{config.tank_size}}\" ></input>\n</div>"
+}
